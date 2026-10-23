@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="متجر أفق الإلكتروني - منتجات متنوعة بأسعار مناسبة بالريال اليمني.">
+  <title>أفق | متجر إلكتروني</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">أهلاً بك في أفق — تسوّق بسهولة وأمان</div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="أفق الرئيسية"><span class="brand-mark">أ</span><span>أفق<small>كل ما تحتاجه أقرب إليك</small></span></a>
+    <nav class="main-nav"><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#why">لماذا أفق؟</a></nav>
+    <div class="header-actions"><button id="accountBtn" class="btn btn-light">دخول / حساب</button><button id="cartBtn" class="btn btn-primary">السلة <span id="cartCount" class="count">0</span></button></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy"><span class="eyebrow">تجربة تسوّق مختلفة</span><h1>كل ما تبحث عنه،<br><em>في أفق واحد.</em></h1><p>اكتشف منتجات مختارة للمنزل والحياة اليومية، مع تجربة تسوّق سهلة وواضحة.</p><a href="#products" class="btn btn-primary btn-large">اكتشف المنتجات <span>←</span></a><div class="hero-note"><span class="tiny-check">✓</span> تسوّق مريح • أسعار بالريال اليمني</div></div>
+      <div class="hero-art"><div class="hero-circle"></div><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1100&q=85" alt="تجربة التسوق الإلكتروني" onerror="this.style.display='none'"><div class="floating-card"><span class="floating-icon">✦</span><span><b>اختيارات أفق</b><small>منتجات لكل يوم</small></span></div></div>
+    </section>
+
+    <section class="trust-strip"><div><span>✓</span><b>اختيارات متنوعة</b><small>منتجات تناسب احتياجاتك</small></div><div><span>◇</span><b>تسوّق بسهولة</b><small>خطوات واضحة للطلب</small></div><div><span>↗</span><b>متابعة الطلب</b><small>إدارة الطلبات من المتجر</small></div></section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading"><div><span class="eyebrow">تصفّح مجموعتنا</span><h2>منتجات مختارة لك</h2><p>اكتشف أحدث المنتجات في متجر أفق.</p></div><div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن منتج..." aria-label="ابحث عن منتج"></div></div>
+      <div id="categoryFilters" class="category-filters"><button class="filter-chip active" data-category="0">كل المنتجات</button></div>
+      <div id="productsGrid" class="products-grid"><div class="loading">جارٍ تحميل المنتجات...</div></div>
+      <p id="emptyState" class="empty-state hidden">لا توجد منتجات مطابقة لبحثك.</p>
+    </section>
+
+    <section id="why" class="why-section"><div><span class="eyebrow">أفق يهتم بتجربتك</span><h2>تسوّق بثقة،<br>واختر ما يناسبك.</h2><p>صممنا تجربة واضحة تساعدك على اكتشاف المنتجات وإرسال طلبك بسهولة.</p></div><div class="why-cards"><article><span>01</span><h3>منتجات واضحة</h3><p>تعرف على وصف المنتج وسعره قبل الطلب.</p></article><article><span>02</span><h3>طلب سهل</h3><p>أدخل بيانات التواصل والتوصيل لإرسال طلبك.</p></article><article><span>03</span><h3>إدارة منظمة</h3><p>تُحفظ الطلبات في النظام ليتمكن فريق المتجر من مراجعتها.</p></article></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="/"><span class="brand-mark">أ</span><span>أفق<small>كل ما تحتاجه أقرب إليك</small></span></a><p>© <span id="year"></span> متجر أفق. جميع الحقوق محفوظة.</p><span>صنع بعناية لرحلة تسوّق أفضل.</span></footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button id="closeModal" class="modal-close" aria-label="إغلاق">×</button><div id="modalContent"></div></section>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
